@@ -1,0 +1,20 @@
+[17-Jul-2015 05:15:37 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/technos/public_html/2015/connect.php on line 8
+[17-Jul-2015 05:20:54 America/Chicago] PHP Warning:  preg_match(): Unknown modifier 'a' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:21:33 America/Chicago] PHP Warning:  preg_match(): Unknown modifier 'a' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:21:59 America/Chicago] PHP Warning:  preg_match(): Unknown modifier 'a' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:23:39 America/Chicago] PHP Warning:  preg_match(): Unknown modifier 'a' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:24:06 America/Chicago] PHP Warning:  preg_match(): Unknown modifier 'a' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:26:47 America/Chicago] PHP Warning:  preg_match(): Unknown modifier '-' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:27:32 America/Chicago] PHP Warning:  preg_match(): Unknown modifier '-' in /home/technos/public_html/2015/reg.php on line 117
+[17-Jul-2015 05:27:51 America/Chicago] PHP Warning:  preg_match(): Unknown modifier '-' in /home/technos/public_html/2015/reg.php on line 117
+[21-Aug-2015 06:04:25 America/Chicago] PHP Warning:  include_once(backend/connect_local.php): failed to open stream: No such file or directory in /home/technos/public_html/2015/index.php on line 3
+[21-Aug-2015 06:04:25 America/Chicago] PHP Warning:  include_once(): Failed opening 'backend/connect_local.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/technos/public_html/2015/index.php on line 3
+[21-Aug-2015 06:04:25 America/Chicago] PHP Fatal error:  Call to undefined function setSessionVar() in /home/technos/public_html/2015/index.php on line 5
+[21-Aug-2015 06:04:25 America/Chicago] PHP Warning:  include_once(backend/connect_local.php): failed to open stream: No such file or directory in /home/technos/public_html/2015/index.php on line 3
+[21-Aug-2015 06:04:25 America/Chicago] PHP Warning:  include_once(): Failed opening 'backend/connect_local.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/technos/public_html/2015/index.php on line 3
+[21-Aug-2015 06:04:25 America/Chicago] PHP Fatal error:  Call to undefined function setSessionVar() in /home/technos/public_html/2015/index.php on line 5
+[21-Aug-2015 06:08:47 America/Chicago] PHP Fatal error:  Call to undefined function hasSessionVar() in /home/technos/public_html/2015/index.php on line 114
+[21-Aug-2015 06:08:50 America/Chicago] PHP Fatal error:  Call to undefined function hasSessionVar() in /home/technos/public_html/2015/index.php on line 114
+[01-Sep-2015 14:14:45 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/technos/public_html/2015/backend/connect_local.php on line 10
+[01-Sep-2015 14:18:51 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'technos_cad'@'localhost' to database 'technos_technoshinex5' in /home/technos/public_html/2015/backend/connect_local.php on line 10
+[10-Sep-2015 05:51:16 America/Chicago] PHP Fatal error:  Cannot redeclare verification_mail_to() (previously declared in /home/technos/public_html/2015/backend/connect_local.php:47) in /home/technos/public_html/2015/backend/connect_local.php on line 120

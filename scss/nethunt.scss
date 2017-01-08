@@ -1,0 +1,120 @@
+body {
+    //background: darkslategrey;
+    background: url("../images/nethunt/cb5.jpg");
+    height: 100vh;
+    color: white;
+    box-shadow: inset 0px 0px 80px black;
+    font-family: Colored Crayons;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+
+#container {
+    height: 100%;
+    position: relative;
+}
+
+#demo-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    position: relative;
+    text-align: center;
+    h1 {
+        padding: 30px;
+        font-weight: bold;
+        font-size: 50pt;
+        text-shadow: inset 0px 0px 5px black;
+        letter-spacing: 0.4em;
+        color: white;
+    }
+    p {
+        padding: 10px 20px;
+        display: inline-block;
+        //background: #0681b9;
+        //background: black;
+        color: springgreen;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    height: 30%;
+}
+
+#content {
+    position: relative;
+    height: 50%;
+    text-align: center;
+    .instructions {
+        height: 100%;
+        background: url("../images/nethunt/green_board.jpg");
+        background-size: 100% 100%;
+        display: inline-block;
+        padding: 30px 25px;
+        h2 {
+            padding: 10px;
+            //font-style: italic;
+            //color: darkslategrey;
+            color: yellow;
+        }
+        ul {
+            text-align: left;
+            list-style: none;
+            font-size: 14pt;
+            li {
+                margin: 5px 0px;
+            }
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    padding-top: 20px;
+    text-align: center;
+    display: table;
+    .play-button {
+        cursor: pointer;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 40px;
+        color: white;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        background: #8BC34A;
+        display: inline-block;
+        padding-left: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        //text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#material-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: transparent;
+    //transform: scale(1);
+    transition: transform 0.8s ease-in-out, background 0s linear 0.8s;
+    &.show {
+        transition: transform 0.8s ease-in-out;
+        //width: 200vmax;
+        //height: 200vmax;
+        background: #2196F3;
+        //background: #8BC34A;
+        transform: scale(30);
+    }
+}

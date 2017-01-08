@@ -1,0 +1,169 @@
+/* line 1, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+.login-header {
+  position: relative;
+  overflow-y: auto !important;
+  background: white !important; }
+  /* line 5, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header #bg {
+    background: url("../images/about.jpg");
+    opacity: 0.07;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  /* line 14, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header .o {
+    border: 5px solid rgba(0, 177, 255, 0.5) !important; }
+    /* line 16, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+    .login-header .o::before {
+      animation: none !important; }
+  /* line 20, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header .cad-logo {
+    top: 15px;
+    bottom: 0px; }
+  /* line 24, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header h1 {
+    top: 0% !important;
+    transform: translate(-50%, 0%) scale(0.5) !important; }
+    /* line 27, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+    .login-header h1 span {
+      color: #00b1ff !important; }
+  /* line 31, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header #header-wrapper {
+    display: inline-block; }
+  /* line 34, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+  .login-header #wrapper {
+    position: relative;
+    top: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; }
+    /* line 42, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+    .login-header #wrapper .form-wrapper {
+      display: inline-block;
+      width: 49%;
+      min-width: 300px !important; }
+      /* line 52, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .form-wrapper #login-form,
+      .login-header #wrapper .form-wrapper #reg-form,
+      .login-header #wrapper .form-wrapper #email-form,
+      .login-header #wrapper .form-wrapper #password-form {
+        padding: 0px;
+        display: inline-block; }
+        /* line 55, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .form-wrapper #login-form h2,
+        .login-header #wrapper .form-wrapper #reg-form h2,
+        .login-header #wrapper .form-wrapper #email-form h2,
+        .login-header #wrapper .form-wrapper #password-form h2 {
+          margin: 20px 0px;
+          font-weight: 300;
+          letter-spacing: 5px;
+          font-size: 30pt;
+          display: none; }
+        /* line 62, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .form-wrapper #login-form input.text,
+        .login-header #wrapper .form-wrapper #reg-form input.text,
+        .login-header #wrapper .form-wrapper #email-form input.text,
+        .login-header #wrapper .form-wrapper #password-form input.text {
+          display: block;
+          width: 120%;
+          position: relative;
+          transform: translateX(-50%);
+          left: 50%;
+          background: transparent;
+          text-align: center;
+          color: darkslategray;
+          font-size: 14pt;
+          padding: 10px;
+          border-bottom: 2px solid #00b1ff; }
+          /* line 74, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+          .login-header #wrapper .form-wrapper #login-form input.text.last,
+          .login-header #wrapper .form-wrapper #reg-form input.text.last,
+          .login-header #wrapper .form-wrapper #email-form input.text.last,
+          .login-header #wrapper .form-wrapper #password-form input.text.last {
+            border-bottom: 0px solid #00b1ff;
+            /*#d34040*/ }
+        /* line 79, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .form-wrapper #login-form input[type="submit"],
+        .login-header #wrapper .form-wrapper #reg-form input[type="submit"],
+        .login-header #wrapper .form-wrapper #email-form input[type="submit"],
+        .login-header #wrapper .form-wrapper #password-form input[type="submit"] {
+          margin: 20px 0px;
+          background: yellowgreen;
+          padding: 5px 25px;
+          font-size: 16pt;
+          border-radius: 2px;
+          color: white;
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+          transition: box-shadow 0.3s;
+          cursor: pointer; }
+          /* line 89, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+          .login-header #wrapper .form-wrapper #login-form input[type="submit"]:hover,
+          .login-header #wrapper .form-wrapper #reg-form input[type="submit"]:hover,
+          .login-header #wrapper .form-wrapper #email-form input[type="submit"]:hover,
+          .login-header #wrapper .form-wrapper #password-form input[type="submit"]:hover {
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3); }
+        /* line 93, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .form-wrapper #login-form p.change_link,
+        .login-header #wrapper .form-wrapper #reg-form p.change_link,
+        .login-header #wrapper .form-wrapper #email-form p.change_link,
+        .login-header #wrapper .form-wrapper #password-form p.change_link {
+          font-size: 10pt; }
+      /* line 99, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .form-wrapper #email-form,
+      .login-header #wrapper .form-wrapper #password-form {
+        padding-top: 50px; }
+        /* line 101, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .form-wrapper #email-form input[type="submit"],
+        .login-header #wrapper .form-wrapper #password-form input[type="submit"] {
+          margin-top: 50px; }
+      /* line 106, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .form-wrapper .errors,
+      .login-header #wrapper .form-wrapper .login-message {
+        padding: 10px;
+        font-size: 18px;
+        color: crimson; }
+      /* line 111, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .form-wrapper .login-message {
+        color: limegreen; }
+    /* line 115, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+    .login-header #wrapper .message {
+      padding: 50px; }
+      /* line 117, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .message img {
+        width: 200px; }
+      /* line 120, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+      .login-header #wrapper .message .text {
+        line-height: 150%; }
+        /* line 122, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+        .login-header #wrapper .message .text .email {
+          color: dodgerblue; }
+
+/* line 130, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: darkslategray;
+  opacity: 0.5; }
+
+/* line 136, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: darkslategray;
+  opacity: 0.5; }
+
+/* line 142, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: darkslategray;
+  opacity: 0.5; }
+
+/* line 148, C:/xampp/htdocs/technoshinexv/scss/login.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: darkslategray;
+  opacity: 0.5; }
+
+/*# sourceMappingURL=login.css.map */

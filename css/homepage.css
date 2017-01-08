@@ -1,0 +1,1449 @@
+/*
+@import url(http://fonts.googleapis.com/css?family=VT323);
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,700,100,400,300);
+@import url(http://fonts.googleapis.com/css?family=Megrim);
+/* line 14, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+body,
+html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif; }
+
+/* line 19, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+a:visited {
+  color: inherit; }
+
+/* line 23, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+a:link {
+  color: inherit; }
+
+/* line 29, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+body {
+  position: relative;
+  overflow-x: hidden; }
+
+/* line 34, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+#load-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: 999; }
+  /* line 42, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #load-bg span.load-percent {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    color: white;
+    width: 35px;
+    height: 35px;
+    background: url("../favicon.ico");
+    background-position: center center;
+    background-size: contain; }
+  /* line 74, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #load-bg .loader4 {
+    width: 300px;
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  /* line 81, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #load-bg .loader4 div {
+    height: 100%; }
+  /* line 84, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #load-bg .loader4 div {
+    border-radius: 50%;
+    padding: 8px;
+    border: 3px solid transparent;
+    animation: rotate linear 3.5s infinite;
+    border-radius: 50%;
+    padding: 10px;
+    animation: rotate2 5s infinite linear; }
+  /* line 92, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #load-bg div:hover {
+    animation-play-state: paused; }
+
+/* line 97, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+#container {
+  height: 100%;
+  position: relative; }
+  /* line 100, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container .menu {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    overflow: visible;
+    transition: 0.3s;
+    transform: translateX(-100%); }
+    /* line 111, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .menu button.menu__handle {
+      z-index: 2;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: none; }
+    /* line 118, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .menu .morph-shape {
+      position: absolute;
+      width: 200px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: 0.3s;
+      pointer-events: none; }
+    /* line 129, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .menu .morph-shape svg path {
+      fill: rgba(0, 0, 0, 0.8); }
+    /* line 134, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .menu .menu__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+      /* line 141, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container .menu .menu__inner ul {
+        display: block;
+        height: 80%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        list-style: none; }
+        /* line 150, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu .menu__inner ul li {
+          width: 100%;
+          height: 14.28%;
+          color: white;
+          transition: 0.7s;
+          transform: scale(1) translateX(-50%);
+          opacity: 0;
+          text-align: center;
+          display: table; }
+          /* line 161, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0px;
+            background: orange;
+            left: 100%;
+            top: 0;
+            transition: width 0.3s linear; }
+          /* line 171, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:hover {
+            transition: 0.3s;
+            transition-delay: 0s !important; }
+            /* line 182, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container .menu .menu__inner ul li:hover a {
+              border-right: 5px solid orange; }
+          /* line 186, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li a {
+            border-right: 0px solid orange;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            letter-spacing: 0.0em;
+            transition: 0.3s;
+            padding: 5px; }
+            /* line 196, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container .menu .menu__inner ul li a:visited {
+              color: inherit; }
+            /* line 199, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container .menu .menu__inner ul li a i {
+              display: none;
+              font-size: 1.5em;
+              color: #5590ff; }
+            /* line 205, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container .menu .menu__inner ul li a span {
+              display: inline-block;
+              transition: 0.3s;
+              font-size: 0.8em; }
+          /* line 215, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:nth-child(1) a i {
+            color: greenyellow; }
+          /* line 215, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:nth-child(2) a i {
+            color: #4577ff; }
+          /* line 215, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:nth-child(3) a i {
+            color: #ef33ff; }
+          /* line 215, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:nth-child(4) a i {
+            color: #727272; }
+          /* line 215, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container .menu .menu__inner ul li:nth-child(5) a i {
+            color: #f4ff6f; }
+    /* line 238, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .menu.menu--open {
+      transform: translateX(0%); }
+      /* line 240, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container .menu.menu--open .morph-shape {
+        transform: translateX(0%); }
+      /* line 247, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container .menu.menu--open .menu__inner ul li {
+        opacity: 1;
+        transform: scale(1) translateX(0%); }
+        /* line 250, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(1) {
+          transition-delay: 0.4s; }
+        /* line 253, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(2) {
+          transition-delay: 0.55s; }
+        /* line 256, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(3) {
+          transition-delay: 0.7s; }
+        /* line 259, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(4) {
+          transition-delay: 0.85s; }
+        /* line 262, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(5) {
+          transition-delay: 1.0s; }
+        /* line 265, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(6) {
+          transition-delay: 1.15s; }
+        /* line 268, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .menu.menu--open .menu__inner ul li:nth-child(7) {
+          transition-delay: 1.3s; }
+  /* line 279, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container .login {
+    z-index: 100;
+    outline: none;
+    position: fixed;
+    top: 30px;
+    right: 30px; }
+    /* line 285, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .login span.name {
+      color: white;
+      padding: 10px 10px;
+      background: black;
+      opacity: 0.6;
+      font-size: 10pt;
+      margin-right: 10px;
+      border-radius: 2px;
+      letter-spacing: 0.5px; }
+      /* line 294, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container .login span.name a {
+        margin: 10px;
+        text-decoration: none;
+        padding: 10px;
+        transition: background 0.3s; }
+        /* line 299, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .login span.name a:hover {
+          background: blue; }
+  /* line 305, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container .lines-button {
+    background: transparent;
+    display: inline-block;
+    padding: 20px 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.3s linear; }
+    /* line 314, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .lines-button:hover .lines {
+      background: #0076ff; }
+    /* line 318, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .lines-button.open {
+      opacity: 1;
+      transform: rotate(-90deg); }
+      /* line 321, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container .lines-button.open .lines {
+        background: rgba(0, 0, 0, 0.5); }
+        /* line 323, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container .lines-button.open .lines:before,
+        #container .lines-button.open .lines:after {
+          opacity: 0;
+          top: 0; }
+  /* line 352, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container .lines {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background: white;
+    transition: all 0.3s linear;
+    top: -2.5px;
+    position: relative;
+    /*create the upper and lower lines as pseudo-elements of the middle line*/ }
+    /* line 359, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .lines:before,
+    #container .lines:after {
+      display: inline-block;
+      width: 40px;
+      height: 5px;
+      background: white;
+      transition: all 0.3s linear;
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 2.85714px center; }
+    /* line 366, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .lines:before {
+      top: 11.42857px; }
+    /* line 369, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .lines:after {
+      top: -11.42857px; }
+  /* line 373, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #header {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(97, 255, 76, 0.75)), to(rgba(0, 0, 255, 0.75)));
+    backface-visibility: hidden; }
+    /* line 381, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .nit-logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 80px;
+      height: 80px;
+      opacity: 0.8; }
+      /* line 387, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .nit-logo img {
+        max-width: 100%; }
+    /* line 392, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .cad-logo {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      -webkit-filter: drop-shadow(5px 5px 3px black);
+      filter: drop-shadow(5px 5px 3px black);
+      opacity: 0.7; }
+      /* line 404, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .cad-logo img {
+        max-width: 100%;
+        vertical-align: middle; }
+    /* line 410, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header h1 {
+      position: absolute;
+      width: 2000px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      font-family: 'Raleway', Raleway Dots, sans-serif;
+      font-size: 5em;
+      letter-spacing: 0.2em;
+      font-weight: 300;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      color: rgba(0, 0, 0, 0.25);
+      display: table;
+      /*background: linear-gradient(90deg, #14ff00 25%, #fff 50%, #ff41ff 75%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+      transition: all 0.5s ease-in-out;
+      /*.atom {
+                z-index: 100;
+                display: inline-block;
+                position: relative;
+                .orbit {
+                    display: none;
+                    position: absolute;
+                    top: -55px;
+                    left: -70px;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 200px;
+                    transform: rotateX(60deg) rotateY(45deg);
+                    &:nth-child(1) {
+                        transform: rotateX(60deg) rotateY(-45deg);
+                        .path {
+                            -webkit-animation: rotate-electron 2s linear 1s infinite;
+                        }
+                    }
+                    &:nth-child(2) {
+                        transform: rotateX(60deg) rotateY(0deg);
+                        .path {
+                            -webkit-animation: rotate-electron 2s linear 1.5s infinite;
+                        }
+                    }
+                    -webkit-transform-style: preserve-3d;
+                    .path {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 200px;
+                        border: 2px solid rgba(255, 255, 255, 0.5);
+                        -webkit-animation: rotate-electron 2s linear infinite;
+                        -webkit-transform-style: preserve-3d;
+                        .electron {
+                            color: rgb(255, 255, 255);
+                            width: 20px;
+                            height: 20px;
+                            //border-radius: 20px;
+                            position: absolute;
+                            top: 20px;
+                            left: 20px;
+                            font-size: 30px;
+                            line-height: 30px;
+                            -webkit-transform-style: preserve-3d;
+                            transform: rotateX(-60deg) rotateY(-45deg);
+                        }
+                    }
+                }  
+            }*/ }
+      /* line 428, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header h1 .tsver {
+        font-weight: 100;
+        color: white;
+        /*-webkit-text-fill-color: white;*/ }
+      /* line 488, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header h1 .o {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.2em;
+        box-shadow: inset 0px 0px 20px 5px rgba(255, 255, 255, 0.5); }
+        /* line 495, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #header h1 .o:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          animation: blow-out 2s linear infinite; }
+    /* line 507, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .scroll-down,
+    #container #header .notification,
+    #container #header .schedule {
+      font-size: 110%;
+      display: inline-block;
+      position: absolute;
+      opacity: 0.7;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, 0%); }
+      /* line 515, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .scroll-down a:hover,
+      #container #header .notification a:hover,
+      #container #header .schedule a:hover {
+        text-decoration: underline; }
+    /* line 519, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .scroll-down {
+      display: none;
+      animation: scroll-down 1s ease infinite;
+      transform-origin: -25% 50%; }
+      /* line 523, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .scroll-down h4 {
+        display: none;
+        color: #3bd8fd;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        font-size: 1.2em;
+        word-spacing: 0.5em;
+        font-weight: bold; }
+      /* line 531, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .scroll-down img {
+        margin-top: 10px;
+        width: 50px; }
+    /* line 537, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .notification,
+    #container #header .schedule {
+      background: white;
+      padding: 15px;
+      border-radius: 5px; }
+      /* line 541, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #header .notification p,
+      #container #header .schedule p {
+        margin-top: 10px;
+        font-size: 90%; }
+    /* line 546, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #header .schedule {
+      left: 10px;
+      transform: none;
+      padding-left: 30px; }
+  /* line 559, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content h1.section-heading {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+    padding: 10px 0px;
+    box-shadow: inset 0 0 50px black;
+    position: relative;
+    font-family: 'Megrim', Raleway;
+    font-size: 3em;
+    display: block;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    background-color: #03A9F4;
+    color: #e8e8e8; }
+    /* line 579, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading span.left,
+    #container #content h1.section-heading span.right {
+      display: inline-block;
+      padding: 10px 10px; }
+      /* line 582, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content h1.section-heading span.left:before,
+      #container #content h1.section-heading span.right:before {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #ffbd44;
+        opacity: 0;
+        transition-delay: 0.2s;
+        font-size: 150%;
+        text-shadow: 1px 1px 2px black; }
+    /* line 593, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading span.left {
+      position: relative;
+      opacity: 1; }
+      /* line 596, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content h1.section-heading span.left:before {
+        left: -100px;
+        content: "{";
+        transition: opacity 0.3s, left 0.7s; }
+    /* line 602, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading span.right {
+      position: relative; }
+      /* line 604, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content h1.section-heading span.right:before {
+        right: -100px;
+        content: "}";
+        transition: opacity 0.3s, right 0.7s; }
+    /* line 610, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading i {
+      color: rgba(0, 0, 0, 0.5); }
+    /* line 615, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.about {
+      background-color: #04f590; }
+    /* line 619, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.offline {
+      background-color: #9f75ff; }
+    /* line 622, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.winners {
+      /*i {
+                    color: yellow;
+                }*/ }
+    /* line 627, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.sponsorship {
+      background-color: #04f590; }
+    /* line 630, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.team {
+      background-color: #9263fd; }
+    /* line 635, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.animated span.left:before {
+      left: -20px;
+      opacity: 1; }
+    /* line 641, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content h1.section-heading.animated span.right:before {
+      right: -20px;
+      opacity: 1; }
+  /* line 664, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #about-us {
+    background: url("../images/about.jpg");
+    position: relative;
+    text-align: center;
+    color: black; }
+    /* line 667, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #about-us:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(0deg, #000000, #000000);
+      opacity: 0.9; }
+    /* line 682, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #about-us div:first-child {
+      overflow: auto;
+      position: relative; }
+      /* line 687, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #about-us div:first-child h3 {
+        position: relative;
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 2em;
+        color: steelblue;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+        /* line 695, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #about-us div:first-child h3:before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 500px;
+          height: 1px;
+          background: orange; }
+      /* line 706, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #about-us div:first-child h4 {
+        color: white;
+        padding: 10px;
+        color: white;
+        word-spacing: 0.8em;
+        color: white; }
+      /* line 716, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #about-us div:first-child p {
+        position: relative;
+        color: white;
+        margin: 30px 100px;
+        line-height: 2;
+        letter-spacing: 1px; }
+    /* line 728, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #about-us div.video {
+      position: relative;
+      padding-bottom: 50px; }
+  /* line 734, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #online-events {
+    position: relative;
+    text-align: center;
+    display: inline-block; }
+    /* line 742, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #online-events .events {
+      position: relative;
+      display: inline-block;
+      margin-bottom: -5px; }
+      /* line 747, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #online-events .events .event {
+        width: 50%;
+        height: 500px;
+        float: left;
+        position: relative;
+        cursor: pointer;
+        /*OFFLINE EVENTS 
+                    
+                    &.cs {
+                        background: url("../images/off/cs.png");
+                        @include anim-back;
+                        &:before {
+                            background: $violet;
+                        }
+                    }
+                    &.poy {
+                        background: url("../images/off/poy.png");
+                        @include anim-back;
+                        &:before {
+                            background: $blue;
+                        }
+                    }
+                    &.t {
+                        background: url("../images/off/t.png");
+                        @include anim-back;
+                        &:before {
+                            background: $red;
+                        }
+                    }
+                    &.tm {
+                        background: url("../images/off/tm.png");
+                        @include anim-back;
+                        &:before {
+                            background: $green;
+                        }
+                    }*/ }
+        /* line 759, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event .details {
+          font-size: 2em;
+          opacity: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          transform: translateY(-50%) scale(1);
+          color: white;
+          text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+          transition: 0.5s; }
+          /* line 770, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event .details h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center center;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+            font-weight: 300; }
+            /* line 778, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #online-events .events .event .details h2:hover {
+              transform: translate(-50%, -50%) scale(0.8); }
+          /* line 782, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event .details .p {
+            font-family: sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center center;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2% 5%;
+            width: 70%;
+            display: none;
+            opacity: 0;
+            border-radius: 5px;
+            font-size: 0.6em;
+            color: gainsboro;
+            line-height: 1.2em; }
+            /* line 801, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #online-events .events .event .details .p ol {
+              display: inline-block;
+              text-align: left; }
+          /* line 808, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event .details a {
+            color: greenyellow; }
+            /* line 810, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #online-events .events .event .details a:hover {
+              text-decoration: underline; }
+        /* line 817, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.open:before {
+          opacity: 0.2; }
+        /* line 821, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.animated {
+          /*h2 {
+                            -webkit-animation: online-h2-anim 1s;
+                        }*/ }
+        /* line 840, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.nh {
+          background: url("../images/on/nh.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 827, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.nh:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.5s ease; }
+          /* line 843, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.nh:before {
+            background: rgba(209, 83, 255, 0.8); }
+        /* line 847, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.cz {
+          background: url("../images/on/cz.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 827, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.cz:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.5s ease; }
+          /* line 850, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.cz:before {
+            background: rgba(255, 83, 83, 0.8); }
+        /* line 855, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.jc {
+          background: url("../images/on/jc.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 827, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.jc:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.5s ease; }
+          /* line 858, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.jc:before {
+            background: rgba(83, 129, 255, 0.8); }
+        /* line 863, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.ii {
+          background: url("../images/on/ii.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 827, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.ii:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.5s ease; }
+          /* line 866, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.ii:before {
+            background: rgba(109, 255, 83, 0.8); }
+        /* line 871, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .events .event.cw {
+          background: url("../images/on/cw.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 827, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.cw:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.5s ease; }
+          /* line 875, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #online-events .events .event.cw:before {
+            background: rgba(0, 0, 0, 0.8); }
+    /* line 912, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #online-events .back-to-events {
+      color: white;
+      font-size: 2em;
+      z-index: 2;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      background: yellowgreen;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      line-height: 50px; }
+      /* line 929, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #online-events .back-to-events.open {
+        transform: translateX(-50%) scale(1); }
+        /* line 930, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #online-events .back-to-events.open:hover {
+          transform: translateX(-50%) scale(1.1); }
+  /* line 937, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #offline-events {
+    position: relative;
+    height: 650px; }
+    /* line 941, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #offline-events .events {
+      height: 100%;
+      z-index: 1;
+      position: relative;
+      height: 100%;
+      display: block;
+      background: white;
+      text-align: left;
+      display: table;
+      width: 100%;
+      perspective: 2000px; }
+      /* line 947, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #offline-events .events .event {
+        display: none; }
+        /* line 949, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event .details {
+          font-size: 1em; }
+      /* line 958, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #offline-events .events ul.list {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 0px;
+        list-style: none;
+        z-index: 1;
+        position: relative;
+        transform-style: preserve-3d;
+        transform-origin: 50% 0%;
+        transform: rotateY(45deg); }
+        /* line 968, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events ul.list li {
+          margin: 20px 0px; }
+          /* line 970, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events ul.list li a {
+            box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            padding: 5px 10px;
+            position: relative;
+            color: rgba(0, 0, 0, 0.8);
+            transition: color 0.3s ease;
+            cursor: pointer; }
+            /* line 981, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #offline-events .events ul.list li a:after,
+            #container #content #offline-events .events ul.list li a:before {
+              color: white;
+              position: absolute;
+              top: 0; }
+            /* line 986, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #offline-events .events ul.list li a:after {
+              content: "";
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              background: rgba(255, 255, 255, 0.9);
+              opacity: 1;
+              z-index: -2;
+              transition: all 0.3s ease; }
+            /* line 998, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #offline-events .events ul.list li a:before {
+              position: absolute;
+              width: 0px;
+              height: 100%;
+              left: 0;
+              top: 0;
+              content: "";
+              background: greenyellow;
+              opacity: 1;
+              transition: width 0.3s ease;
+              z-index: -1; }
+            /* line 1012, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #offline-events .events ul.list li a:hover:after,
+            #container #content #offline-events .events ul.list li a.selected:after {
+              width: 100%; }
+            /* line 1015, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #offline-events .events ul.list li a:hover:before,
+            #container #content #offline-events .events ul.list li a.selected:before {
+              left: 0;
+              width: 50%; }
+      /* line 1023, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #offline-events .events .event-show {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        transition: opacity 0.3s ease; }
+        /* line 1031, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show .info {
+          line-height: 1.4em;
+          color: gainsboro;
+          position: absolute;
+          left: 30%;
+          top: 50%;
+          transform: translate(0%, -50%); }
+          /* line 1039, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show .info .left {
+            color: yellowgreen; }
+          /* line 1043, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show .info ul.tab li {
+            margin-left: 50px;
+            list-style-type: disc; }
+        /* line 1049, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.cs {
+          background: url("../images/off/cs.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.cs:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1055, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.tm {
+          background: url("../images/off/tm.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.tm:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1061, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.t {
+          background: url("../images/off/t.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.t:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1067, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.tc {
+          background: url("../images/off/tc.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.tc:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1073, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.poy {
+          background: url("../images/off/poy.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.poy:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1079, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.gg {
+          background: url("../images/off/gg.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.gg:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1085, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.bm {
+          background: url("../images/off/bm.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.bm:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1091, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.r {
+          background: url("../images/off/r.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.r:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1097, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.sc {
+          background: url("../images/off/sc.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.sc:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+        /* line 1103, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #offline-events .events .event-show.th {
+          background: url("../images/off/th.jpg");
+          background-size: cover;
+          background-position: center center; }
+          /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #offline-events .events .event-show.th:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, black, black);
+            opacity: 0.8;
+            z-index: 0; }
+      /* line 1110, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #offline-events .events #mycanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+  /* line 1119, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #tsx4-winners {
+    position: relative;
+    text-align: center;
+    height: 100vh; }
+    /* line 1124, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #tsx4-winners .collage {
+      height: 100%;
+      background: url("../images/collage_minsize.jpg");
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center center; }
+      /* line 650, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #tsx4-winners .collage:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 255, 0.8), rgba(255, 255, 0, 0.8));
+        opacity: 0.8;
+        z-index: 0; }
+      /* line 1137, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #tsx4-winners .collage h3 {
+        color: white;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        letter-spacing: 0.2em;
+        text-shadow: 2px 2px 2px solid black; }
+  /* line 1149, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #sponsors {
+    padding: 100px;
+    overflow: hidden;
+    text-align: center; }
+    /* line 1153, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #sponsors .sponsor {
+      width: 200px;
+      height: 150px;
+      background: black;
+      display: inline-block;
+      margin: 20px 20px; }
+      /* line 1160, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#vatika {
+        background: url("../images/sponsors/vatika.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1166, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#studioe {
+        background: url("../images/sponsors/studioe.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1172, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#mageba {
+        background: url("../images/sponsors/mageba.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1178, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#macintel {
+        background: url("../images/sponsors/macintel.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1184, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#ananyas {
+        background: url("../images/sponsors/ananyas.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1190, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#pantaloons {
+        background: url("../images/sponsors/pantaloons.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1196, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#dominos {
+        background: url("../images/sponsors/dominos.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1202, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#cmc {
+        background: url("../images/sponsors/cmc.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1208, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#codechef {
+        background: url("../images/sponsors/code.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1214, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#hackerrank {
+        background: url("../images/sponsors/hackerrank.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      /* line 1220, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #sponsors .sponsor#pinnacle {
+        background: url("../images/sponsors/pinnacle.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
+  /* line 1228, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #content #team {
+    position: relative;
+    background: url("../images/zwartevilt.png");
+    color: white;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; }
+    /* line 1236, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #content #team .team-content {
+      text-align: center;
+      margin: 50px 0px; }
+      /* line 1239, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #content #team .team-content .member {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 170px; }
+        /* line 1245, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #team .team-content .member .dp {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          display: inline-block;
+          overflow: hidden !important;
+          border-radius: 2px; }
+          /* line 1252, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #team .team-content .member .dp img {
+            width: 100%; }
+        /* line 1256, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #content #team .team-content .member .details {
+          margin-top: 10px;
+          color: darkslategray; }
+          /* line 1259, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #team .team-content .member .details .member-name {
+            color: white;
+            font-size: 75%; }
+          /* line 1263, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #content #team .team-content .member .details .designation {
+            color: #9f9e9e;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+            font-size: 80%; }
+            /* line 1269, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #team .team-content .member .details .designation:before {
+              content: "("; }
+            /* line 1272, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+            #container #content #team .team-content .member .details .designation:after {
+              content: ")"; }
+  /* line 1281, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container #footer {
+    background: limegreen;
+    color: white;
+    text-align: center;
+    padding: 10px 0; }
+    /* line 1288, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container #footer .base {
+      display: inline-block; }
+      /* line 1290, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #footer .base .contact {
+        font-family: sans-serif;
+        margin: 20px; }
+        /* line 1293, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #footer .base .contact a:first-child {
+          margin-right: 20px; }
+        /* line 1296, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #footer .base .contact i {
+          color: darkgreen;
+          font-size: 150%; }
+      /* line 1301, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #footer .base .share {
+        display: inline-block; }
+        /* line 1303, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #footer .base .share div {
+          display: inline-block;
+          margin: 0px 10px;
+          font-size: 30px;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          transition: background 0.25s ease; }
+          /* line 1312, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #footer .base .share div:hover.facebook {
+            background: #0050ff; }
+          /* line 1315, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #footer .base .share div:hover.youtube {
+            background: #ff2b1e; }
+          /* line 1318, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #footer .base .share div:hover.twitter {
+            background: #07c2ff; }
+      /* line 1325, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #container #footer .base .developed {
+        display: inline-block; }
+        /* line 1327, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+        #container #footer .base .developed a {
+          color: #0031ff;
+          text-decoration: none;
+          padding: 5px;
+          transition: all 0.1s linear; }
+          /* line 1332, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+          #container #footer .base .developed a:hover {
+            background: #0031ff;
+            color: white; }
+  /* line 1342, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #container .thanks {
+    display: inline-block;
+    font-size: 80%; }
+    /* line 1345, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #container .thanks a {
+      font-weight: bold;
+      font-size: 120%;
+      padding: 5px; }
+
+/* line 1353, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 998; }
+  /* line 1363, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+  #popup .popup-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    /* line 1367, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #popup .popup-wrapper .popup-close {
+      cursor: pointer;
+      background: transparent;
+      position: absolute;
+      top: 5%;
+      height: 20%;
+      font-size: 30px;
+      color: crimson;
+      transition: transform 0.3s; }
+      /* line 1376, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #popup .popup-wrapper .popup-close:hover {
+        transform: rotate(90deg); }
+    /* line 1380, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+    #popup .popup-wrapper .content {
+      position: absolute;
+      height: 90%; }
+      /* line 1385, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+      #popup .popup-wrapper .content img {
+        max-height: 100%; }
+
+/* line 1392, C:/xampp/htdocs/technoshinexv/scss/homepage.scss */
+*:focus {
+  outline: none; }
+
+@keyframes blow-out {
+  from {
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white;
+    opacity: 1; }
+  to {
+    transform: scale(3.5);
+    box-shadow: 0px 0px 10px white;
+    opacity: 0; } }
+
+@-webkit-keyframes online-h2-anim {
+  0% {
+    transform: translate(-50%, -50%) scale(1); }
+  25% {
+    transform: translate(-50%, -50%) scale(1.1); }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9); }
+  75% {
+    transform: translate(-50%, -50%) scale(1.1); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
+
+@keyframes scroll-down {
+  /*0% {
+        transform: scale(1) translate(-50%, 0%);
+    }
+    60% {
+        transform: scale(1) translate(-50%, 25%);
+    }
+    100% {
+        transform: scale(1) translate(-50%, 0%);
+    }*/
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0%); }
+  50% {
+    opacity: 0.7; }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 50%); } }
+
+@-webkit-keyframes rotate-electron {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: #64acff; }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: #00ff4e; }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #64acff; } }
+
+@keyframes load-logo {
+  0% {
+    transform: translate(-50%, -50%) scale(1); }
+  50% {
+    transform: translate(-50%, -50%) scale(0.5); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
+
+/*# sourceMappingURL=homepage.css.map */
